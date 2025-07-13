@@ -1,10 +1,10 @@
 {
-  "name": "docker-compose",
+  "name": "docker-learn",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",
-    "start": "node dist/index.js"
+    "dev:docker": "npx prisma migrate dev && node dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +12,11 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "^6.11.1",
-    "@types/express": "^5.0.3",
-    "express": "^5.1.0",
-    "prisma": "^6.11.1",
-    "typescript": "^5.8.3"
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "prisma": "^6.11.1"
   }
 }
